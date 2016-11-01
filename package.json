@@ -1,4 +1,12 @@
 {
+  "scripts": {
+    "start": "react-scripts start",
+    "build": "react-scripts build",
+    "eject": "react-scripts eject"
+  },
+  "devDependencies": {
+    "react-scripts": "0.7.0"
+  },
   "dependencies": {
     "args": "^2.1.0",
     "ava": "^0.16.0",
@@ -16,6 +24,8 @@
     "gulp-ava": "^0.14.1",
     "gulp-eslint": "^3.0.1",
     "gulp-if": "^2.0.1",
+    "react": "^15.3.2",
+    "react-dom": "^15.3.2",
     "yargs": "^6.3.0"
   }
 }

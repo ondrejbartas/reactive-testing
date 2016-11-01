@@ -1,4 +1,16 @@
-# Linter
+## Instalation
+
+```
+yarn
+```
+
+### Starting test app
+
+```
+yarn start
+```
+
+## Linter
 
 Run eslint
 ```
@@ -15,7 +27,7 @@ Run eslint in CI -> will fail correctly
 gulp eslint-ci
 ```
 
-# Unit Testing
+## Unit Testing
 
 Run all tests in project
 ```
@@ -31,4 +43,3 @@ Run single test file
 ```
 gulp ava-file -f src/__test__/someTest.js
 ```
-
