@@ -49,3 +49,19 @@ test('getAge for girl', (t) => {
   t.is(getAge(getPersonalID(65, true)), 65);
   t.is(getAge(getPersonalID(95, true)), 95);
 });
+
+test('getBirth for girl', (t) => {
+  t.is(getBirth(getPersonalID(5, true)), getPersonalID(5).substr(0, 6));
+  t.is(getBirth(getPersonalID(17, true)), getPersonalID(17).substr(0, 6));
+  t.is(getBirth(getPersonalID(20, true)), getPersonalID(20).substr(0, 6));
+  t.is(getBirth(getPersonalID(65, true)), getPersonalID(65).substr(0, 6));
+  t.is(getBirth(getPersonalID(95, true)), getPersonalID(95).substr(0, 6));
+});
+
+test('getBirth for boy', (t) => {
+  t.is(getBirth(getPersonalID(5)), getPersonalID(5).substr(0, 6));
+  t.is(getBirth(getPersonalID(17)), getPersonalID(17).substr(0, 6));
+  t.is(getBirth(getPersonalID(20)), getPersonalID(20).substr(0, 6));
+  t.is(getBirth(getPersonalID(65)), getPersonalID(65).substr(0, 6));
+  t.is(getBirth(getPersonalID(95)), getPersonalID(95).substr(0, 6));
+});
