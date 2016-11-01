@@ -1,0 +1,28 @@
+{
+  "parser"  : "babel-eslint",
+  "plugins": [
+    "import"
+  ],
+  "extends" : ["airbnb"],
+  "globals": {
+    "console": false,
+    "module": false,
+    "process": false,
+    "require": false,
+    "window": false
+  },
+  "settings": {
+    "import/ignore": [
+      "node_modules",
+      "\\.json$"
+    ],
+    "import/parser": "babel-eslint",
+    "import/resolve": {
+      "extensions": [
+        ".js",
+        ".jsx",
+        ".json"
+      ]
+    }
+  }
+}

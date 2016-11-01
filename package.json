@@ -1,0 +1,21 @@
+{
+  "dependencies": {
+    "args": "^2.1.0",
+    "ava": "^0.16.0",
+    "babel-core": "^6.18.0",
+    "babel-eslint": "^7.1.0",
+    "babel-preset-es2015-node6": "^0.3.0",
+    "babel-preset-react": "^6.16.0",
+    "babel-runtime": "^6.18.0",
+    "eslint": "^3.9.1",
+    "eslint-config-airbnb": "^12.0.0",
+    "eslint-plugin-import": "^2.0.1",
+    "eslint-plugin-jsx-a11y": "^2.2.3",
+    "eslint-plugin-react": "^6.4.1",
+    "gulp": "^3.9.1",
+    "gulp-ava": "^0.14.1",
+    "gulp-eslint": "^3.0.1",
+    "gulp-if": "^2.0.1",
+    "yargs": "^6.3.0"
+  }
+}
