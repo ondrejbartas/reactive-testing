@@ -27,5 +27,11 @@
     "react": "^15.3.2",
     "react-dom": "^15.3.2",
     "yargs": "^6.3.0"
+  },
+  "ava": {
+    "babel": "inherit",
+    "require": [
+      "babel-register"
+    ]
   }
 }
