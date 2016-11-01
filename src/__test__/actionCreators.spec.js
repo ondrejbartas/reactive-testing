@@ -1,6 +1,6 @@
-import t from 'ava';
+import test from 'ava';
 import { incrementCounter } from '../actionCreators';
 
-t('incrementCounter will have right type', () => {
+test('incrementCounter will have right type', t => {
   t.is(incrementCounter().type, 'INCREMENT');
-})
+});
