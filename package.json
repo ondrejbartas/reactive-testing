@@ -15,6 +15,7 @@
     "babel-preset-es2015-node6": "^0.3.0",
     "babel-preset-react": "^6.16.0",
     "babel-runtime": "^6.18.0",
+    "bluebird": "^3.4.6",
     "eslint": "^3.9.1",
     "eslint-config-airbnb": "^12.0.0",
     "eslint-plugin-import": "^2.0.1",
