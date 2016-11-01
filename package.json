@@ -12,8 +12,10 @@
     "ava": "^0.16.0",
     "babel-core": "^6.18.0",
     "babel-eslint": "^7.1.0",
+    "babel-polyfill": "^6.16.0",
     "babel-preset-es2015-node6": "^0.3.0",
     "babel-preset-react": "^6.16.0",
+    "babel-preset-stage-0": "^6.16.0",
     "babel-runtime": "^6.18.0",
     "bluebird": "^3.4.6",
     "eslint": "^3.9.1",
@@ -33,7 +35,8 @@
   "ava": {
     "babel": "inherit",
     "require": [
-      "babel-register"
+      "babel-register",
+      "babel-polyfill"
     ]
   }
 }

@@ -2,13 +2,17 @@ import apiCall from './apiCall';
 
 export default function submitForm(values) {
   return async ({ dispatch }) => {
-    dispatch({ type: 'SUBMITTING_FORM' });
+    dispatch({ type: 'FORM_SUBMIT_STARTED' });
 
     const data = await apiCall('/api/form', { method: 'post', body: JSON.stringify(values) });
     if (data.status === 'ok') {
-      dispatch({ type: 'SUBMITTED_FORM', payload: data });
+      dispatch({ type: 'FORM_SUBMIT_SUCCESS', payload: data });
     } else {
-      dispatch({ type: 'ERRORED_FORM', error: data });
+      dispatch({ type: 'FORM_SUBMIT_ERROR', error: data });
     }
+
+    return {
+      type: 'FORM_SUBMIT_FINISHED',
+    };
   };
 }
