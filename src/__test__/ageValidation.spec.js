@@ -1,6 +1,6 @@
 import moment from 'moment';
 import test from 'ava';
-import ageValidation, { getAge } from '../ageValidation';
+import ageValidation, { getAge, getBirth } from '../ageValidation';
 
 function getPersonalID(old, girl = false) {
   const base = moment().subtract(old, 'years').format('YYMMDD1234');
@@ -51,17 +51,13 @@ test('getAge for girl', (t) => {
 });
 
 test('getBirth for girl', (t) => {
-  t.is(getBirth(getPersonalID(5, true)), getPersonalID(5).substr(0, 6));
-  t.is(getBirth(getPersonalID(17, true)), getPersonalID(17).substr(0, 6));
-  t.is(getBirth(getPersonalID(20, true)), getPersonalID(20).substr(0, 6));
-  t.is(getBirth(getPersonalID(65, true)), getPersonalID(65).substr(0, 6));
-  t.is(getBirth(getPersonalID(95, true)), getPersonalID(95).substr(0, 6));
+  t.is(getBirth('8658091234'), '1986-8-9');
+  t.is(getBirth('1558091234'), '2015-8-9');
+  t.is(getBirth('1562091234'), '2015-12-9');
 });
 
 test('getBirth for boy', (t) => {
-  t.is(getBirth(getPersonalID(5)), getPersonalID(5).substr(0, 6));
-  t.is(getBirth(getPersonalID(17)), getPersonalID(17).substr(0, 6));
-  t.is(getBirth(getPersonalID(20)), getPersonalID(20).substr(0, 6));
-  t.is(getBirth(getPersonalID(65)), getPersonalID(65).substr(0, 6));
-  t.is(getBirth(getPersonalID(95)), getPersonalID(95).substr(0, 6));
+  t.is(getBirth('8608091234'), '1986-8-9');
+  t.is(getBirth('1508091234'), '2015-8-9');
+  t.is(getBirth('1512091234'), '2015-12-9');
 });
