@@ -1,5 +1,7 @@
+export const INCREMENT = 'INCREMENT';
+
 export function incrementCounter() {
   return {
-    type: 'INCREMENT',
+    type: INCREMENT,
   };
 }
