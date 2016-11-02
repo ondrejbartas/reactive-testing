@@ -25,7 +25,7 @@ function getTestFile(file) {
 
 // single run on all tests
 gulp.task('ava', () => gulp
-  .src(['src/**/__test__/**/*.js'])
+  .src(['src/**/__test__/**/*.js*'])
   .pipe(ava()));
 
 // watcher for unit tests
@@ -34,7 +34,7 @@ gulp.task('ava', () => gulp
 //
 // so, if we start to watch, you have to change something to see the result
 gulp.task('ava-watch', () => gulp
-  .watch(['src/**/*.js'], (file) => {
+  .watch(['src/**/*.js*'], (file) => {
     gulp.src(getTestFile(file)).pipe(ava())
     // log is crucial here
     .on('error', err => console.log(err.message)); // eslint-disable-line

@@ -3,6 +3,9 @@
   "plugins": [
     "import"
   ],
+  "rules": {
+    "react/jsx-filename-extension": 0
+  },
   "extends" : ["airbnb"],
   "globals": {
     "console": false,
