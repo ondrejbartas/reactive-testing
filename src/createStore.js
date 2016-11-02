@@ -1,3 +1,4 @@
+import { createStore } from 'redux';
 import * as actions from './actionCreators';
 
 const InitialState = {
@@ -17,4 +18,8 @@ export function reducer(state = InitialState, action = {}) {
     }
     default: return state;
   }
+}
+
+export default function createAppStore(initialState) {
+  return createStore(reducer, initialState);
 }
